@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Sun Mar 10 18:27:17 2013</timestamp>
+  <timestamp>Tue Mar 12 23:44:49 2013</timestamp>
   <block>
     <key>options</key>
     <param>
@@ -124,49 +124,6 @@
     <param>
       <key>_coordinate</key>
       <value>(193, 14)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_sig_source_x</key>
-    <param>
-      <key>id</key>
-      <value>gr_sig_source_x</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>waveform</key>
-      <value>gr.GR_COS_WAVE</value>
-    </param>
-    <param>
-      <key>freq</key>
-      <value>tone1</value>
-    </param>
-    <param>
-      <key>amp</key>
-      <value>tone_ampl</value>
-    </param>
-    <param>
-      <key>offset</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(258, 136)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -502,74 +459,54 @@
     </param>
   </block>
   <block>
-    <key>wxgui_scopesink2</key>
+    <key>variable_slider</key>
     <param>
       <key>id</key>
-      <value>wxgui_scopesink2_0</value>
+      <value>noise_ampl</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>False</value>
+      <value>True</value>
     </param>
     <param>
-      <key>type</key>
-      <value>complex</value>
+      <key>label</key>
+      <value>Noise Ampl</value>
     </param>
     <param>
-      <key>title</key>
-      <value>Scope Plot</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>v_scale</key>
+      <key>value</key>
       <value>0</value>
     </param>
     <param>
-      <key>v_offset</key>
+      <key>min</key>
       <value>0</value>
     </param>
     <param>
-      <key>t_scale</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>ac_couple</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>xy_mode</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
+      <key>max</key>
       <value>1</value>
     </param>
     <param>
-      <key>win_size</key>
-      <value></value>
+      <key>num_steps</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_VERTICAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
     </param>
     <param>
       <key>grid_pos</key>
-      <value>1,2,2,4</value>
+      <value>1, 1, 2, 1</value>
     </param>
     <param>
       <key>notebook</key>
       <value></value>
     </param>
     <param>
-      <key>trig_mode</key>
-      <value>gr.gr_TRIG_MODE_AUTO</value>
-    </param>
-    <param>
-      <key>y_axis_label</key>
-      <value>Counts</value>
-    </param>
-    <param>
       <key>_coordinate</key>
-      <value>(1128, 498)</value>
+      <value>(12, 414)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -640,7 +577,7 @@
     </param>
     <param>
       <key>win</key>
-      <value>window.blackmanharris</value>
+      <value>None</value>
     </param>
     <param>
       <key>win_size</key>
@@ -648,11 +585,11 @@
     </param>
     <param>
       <key>grid_pos</key>
-      <value>1, 2, 2, 4</value>
+      <value></value>
     </param>
     <param>
       <key>notebook</key>
-      <value></value>
+      <value>graphs_notebook, 0</value>
     </param>
     <param>
       <key>freqvar</key>
@@ -661,6 +598,425 @@
     <param>
       <key>_coordinate</key>
       <value>(1114, 264)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>wxgui_scopesink2</key>
+    <param>
+      <key>id</key>
+      <value>wxgui_scopesink2_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Scope Plot</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>v_scale</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>v_offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>t_scale</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>ac_couple</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>xy_mode</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>win_size</key>
+      <value></value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value></value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value>graphs_notebook,2</value>
+    </param>
+    <param>
+      <key>trig_mode</key>
+      <value>gr.gr_TRIG_MODE_AUTO</value>
+    </param>
+    <param>
+      <key>y_axis_label</key>
+      <value>Counts</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1112, 674)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>wxgui_waterfallsink2</key>
+    <param>
+      <key>id</key>
+      <value>wxgui_waterfallsink2_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Waterfall Plot</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>baseband_freq</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>dynamic_range</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>ref_level</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>ref_scale</key>
+      <value>2.0</value>
+    </param>
+    <param>
+      <key>fft_size</key>
+      <value>512</value>
+    </param>
+    <param>
+      <key>fft_rate</key>
+      <value>15</value>
+    </param>
+    <param>
+      <key>average</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>avg_alpha</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>win</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>win_size</key>
+      <value></value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value></value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value>graphs_notebook,1</value>
+    </param>
+    <param>
+      <key>freqvar</key>
+      <value>None</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1115, 478)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_noise_source_x</key>
+    <param>
+      <key>id</key>
+      <value>gr_noise_source_x</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>noise_type</key>
+      <value>gr.GR_UNIFORM</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>noise_ampl</value>
+    </param>
+    <param>
+      <key>seed</key>
+      <value>42</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(260, 364)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>notebook</key>
+    <param>
+      <key>id</key>
+      <value>graphs_notebook</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.NB_TOP</value>
+    </param>
+    <param>
+      <key>labels</key>
+      <value>['FFT', 'Waterfall', 'Scope']</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value>1,2,2,4</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1114, 164)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_slider</key>
+    <param>
+      <key>id</key>
+      <value>tone_ampl</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Tone Ampl</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.7</value>
+    </param>
+    <param>
+      <key>min</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>max</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>num_steps</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_VERTICAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value>1, 0, 2, 1</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(14, 570)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Sample Rate</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>13e6/4</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>eng_float</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value>s</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(539, 11)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_sig_source_x</key>
+    <param>
+      <key>id</key>
+      <value>gr_sig_source_x0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>gr.GR_COS_WAVE</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>tone2</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>tone_ampl-tone_ampl</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(259, 248)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>const_source_x</key>
+    <param>
+      <key>id</key>
+      <value>const_source_x_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>const</key>
+      <value>noise_ampl</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(261, 458)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_add_xx</key>
+    <param>
+      <key>id</key>
+      <value>gr_add_xx</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>3</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(529, 172)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -715,7 +1071,7 @@
     </param>
     <param>
       <key>sd_spec0</key>
-      <value></value>
+      <value>A:0</value>
     </param>
     <param>
       <key>clock_source1</key>
@@ -823,7 +1179,7 @@
     </param>
     <param>
       <key>bw0</key>
-      <value>3e6</value>
+      <value>2*14e6</value>
     </param>
     <param>
       <key>center_freq1</key>
@@ -1323,7 +1679,160 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(672, 320)</value>
+      <value>(669, 325)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_sig_source_x</key>
+    <param>
+      <key>id</key>
+      <value>gr_sig_source_x</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>gr.GR_COS_WAVE</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>tone1</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>tone_ampl</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(258, 136)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_slider</key>
+    <param>
+      <key>id</key>
+      <value>tone1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Tone 1</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>50e3</value>
+    </param>
+    <param>
+      <key>min</key>
+      <value>-samp_rate/2</value>
+    </param>
+    <param>
+      <key>max</key>
+      <value>samp_rate/2</value>
+    </param>
+    <param>
+      <key>num_steps</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_HORIZONTAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value>0, 0, 1, 4</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(166, 572)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_slider</key>
+    <param>
+      <key>id</key>
+      <value>tone2</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Tone 2</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>75e3</value>
+    </param>
+    <param>
+      <key>min</key>
+      <value>-samp_rate/2</value>
+    </param>
+    <param>
+      <key>max</key>
+      <value>samp_rate/2</value>
+    </param>
+    <param>
+      <key>num_steps</key>
+      <value>100</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_HORIZONTAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value>0, 4, 1, 4</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(312, 568)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1378,7 +1887,7 @@
     </param>
     <param>
       <key>sd_spec0</key>
-      <value></value>
+      <value>A:0</value>
     </param>
     <param>
       <key>clock_source1</key>
@@ -1486,7 +1995,7 @@
     </param>
     <param>
       <key>bw0</key>
-      <value>3e6</value>
+      <value>2*14e6</value>
     </param>
     <param>
       <key>center_freq1</key>
@@ -1986,410 +2495,13 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(669, 178)</value>
+      <value>(673, 154)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
   </block>
-  <block>
-    <key>gr_sig_source_x</key>
-    <param>
-      <key>id</key>
-      <value>gr_sig_source_x0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>waveform</key>
-      <value>gr.GR_COS_WAVE</value>
-    </param>
-    <param>
-      <key>freq</key>
-      <value>tone2</value>
-    </param>
-    <param>
-      <key>amp</key>
-      <value>tone_ampl-tone_ampl</value>
-    </param>
-    <param>
-      <key>offset</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(259, 248)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>parameter</key>
-    <param>
-      <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>Sample Rate</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>13e6/24</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>eng_float</value>
-    </param>
-    <param>
-      <key>short_id</key>
-      <value>s</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(539, 11)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>tone2</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>Tone 2</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>75e3</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>-samp_rate/2</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>samp_rate/2</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>0, 4, 1, 4</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(312, 568)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>tone1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>Tone 1</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>50e3</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>-samp_rate/2</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>samp_rate/2</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>0, 0, 1, 4</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(166, 572)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>tone_ampl</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>Tone Ampl</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.7</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_VERTICAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>1, 0, 2, 1</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(14, 570)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_slider</key>
-    <param>
-      <key>id</key>
-      <value>noise_ampl</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>Noise Ampl</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_VERTICAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>1, 1, 2, 1</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(12, 414)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_noise_source_x</key>
-    <param>
-      <key>id</key>
-      <value>gr_noise_source_x</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>noise_type</key>
-      <value>gr.GR_GAUSSIAN</value>
-    </param>
-    <param>
-      <key>amp</key>
-      <value>noise_ampl</value>
-    </param>
-    <param>
-      <key>seed</key>
-      <value>42</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(279, 364)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>const_source_x</key>
-    <param>
-      <key>id</key>
-      <value>const_source_x_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>const</key>
-      <value>noise_ampl</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(283, 457)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_add_xx</key>
-    <param>
-      <key>id</key>
-      <value>gr_add_xx</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>3</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(529, 172)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <connection>
-    <source_block_id>gr_noise_source_x</source_block_id>
-    <sink_block_id>gr_add_xx</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>2</sink_key>
-  </connection>
   <connection>
     <source_block_id>gr_sig_source_x0</source_block_id>
     <sink_block_id>gr_add_xx</sink_block_id>
@@ -2421,9 +2533,21 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>const_source_x_0</source_block_id>
+    <source_block_id>uhd_usrp_source_0</source_block_id>
+    <sink_block_id>wxgui_waterfallsink2_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>gr_noise_source_x</source_block_id>
     <sink_block_id>gr_add_xx</sink_block_id>
     <source_key>0</source_key>
     <sink_key>2</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>const_source_x_0</source_block_id>
+    <sink_block_id>gr_add_xx</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
   </connection>
 </flow_graph>
